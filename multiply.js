@@ -3,6 +3,8 @@
 //License: MIT
 //EXAMPLE: multiply('23993828392323423423429798798734','2898798737498273984723984729837492837498234')
 
+//Program works, but is in pre-alpha state. There is redundant code and other stupidities
+
 const multiply = (n1,n2) => {
   
   //remove leading zeroes
