@@ -5,6 +5,7 @@
 
 const multiply = (n1,n2) => {
   
+  //remove leading zeroes
   const leadingZeroes = (str) => {
     return (str.length > 1) ? 
     	(str.charAt(0) == '0') ? 
@@ -14,6 +15,7 @@ const multiply = (n1,n2) => {
   
 const sumStrings = (first,second) => {
 
+  //return array of both strings as arrays [[],[]]
   const strToArr = (a,b) => {
     a = a.split('')
     b = b.split('')
@@ -21,6 +23,8 @@ const sumStrings = (first,second) => {
     return [a,b]
   }
   
+  //add leading zeroes to shorter number if necessary to make them equal in length
+  //which is simpler for choosing which one to iterate by because it won't matter
   const addLeadingZeroes = ([a,b]) => {  
     if (a.length > b.length) {
       a.forEach((val,i) => {
@@ -34,6 +38,9 @@ const sumStrings = (first,second) => {
     return [a,b]
   }
   
+  //add up numbers for each 'decimal place'
+  //Example: 96+87 = ['17','13'] or 17 tens and 13 ones
+  //We can carry the remainders over later
   const addStringNums = ([a,b]) => {
     let sumArr = []
     a.forEach((val,i)=>{
